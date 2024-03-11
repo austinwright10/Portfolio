@@ -33,24 +33,28 @@ nav ul {
     display: flex;
     padding-right: none;
 }
-nav ul li {
+nav ul li{
     display: inline;
     margin: 25px;
-    place-items: center;
     font-size: 25px;
 }
-ul li a {
+nav ul li a {
     text-decoration: none;
     color: rgb(38, 176, 223);
 }
-ul li a:hover {
-    animation-name: nav-bar;
-    animation-duration: 0.5s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+li {
+    transition: transform 0.3s;
+}
+li:hover {
+    transform: scale(1.2);
     color: rgb(23, 150, 193);
 }
-@keyframes nav-bar {
-    0% {font-size: 25px;}
-    100% {font-size: 30px;}
+#profile-pic {
+    background-image: url('IMG_0294.JPG');
+    background-size: 100% 100%;
+    grid-column: 8/10;
+    grid-row: 3/5;
+    width: 20vw;
+    height: 20vw;
+    border-radius: 150px;
 }
