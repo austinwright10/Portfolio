@@ -51,8 +51,31 @@ nav ul li:hover {
     background-image: url('IMG_0294.JPG');
     background-size: 100% 100%;
     grid-column: 8/10;
-    grid-row: 3/5;
+    grid-row: 2/4;
     width: 25vw;
     height: 25vw;
     border-radius: 2000px;
+}
+#typewriter {
+    display: inline-block;
+    grid-row: 4/4;
+    grid-column: 8/8;
+}
+.text {
+    font-size: 2em;
+    letter-spacing: 5px;
+    color: white;
+    border-right: 5px solid;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation:
+        typing 2s steps(15),
+        cursor .4s step-end infinite alternate;
+}
+@keyframes cursor {
+    50% {border-color: transparent}
+}
+@keyframes typing {
+    from {width: 0}
 }
