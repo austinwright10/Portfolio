@@ -1,7 +1,7 @@
 body {
     display: grid;
     grid-template-columns: repeat(16, 1fr);
-    grid-template-rows: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 10vh);
     font-family: 'Raleway', sans-serif;
     background-color: black;
     margin: 0;
@@ -21,11 +21,14 @@ body {
     grid-column: 1/17;
     align-items: center;
     height: 200px;
+    max-height: 50%;
+    align-self: center;
+    margin-top: 40px;
 }
 #nav_options {
     display: flex;
     justify-content: right;
-    width: 35vw;
+    width: 45vw;
 }
 nav ul li{
     display: inline;
@@ -54,7 +57,11 @@ nav ul li:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    grid-column: 8/8;
+    grid-column: 8;
+    grid-row: 6;
+    max-width: 70%;
+    justify-self: center;
+    align-self: center;
 }
 #typewriter {
     display: inline-block;
@@ -69,12 +76,36 @@ nav ul li:hover {
     font-weight: bold;
     overflow: hidden;
     animation:
-        typing 3s steps(15),
+        typing 2.5s steps(12),
         cursor .4s step-end infinite alternate;
+    margin-bottom: 0;
 }
 @keyframes cursor {
     50% {border-color: transparent}
 }
 @keyframes typing {
+    from {width: 0}
+}
+#description{
+    display: inline-block;
+}
+.text2 {
+    font-size: 2em;
+    letter-spacing: 5px;
+    color: white;
+    border-right: 5px solid;
+    width: 100%;
+    white-space: nowrap;
+    font-weight: bold;
+    overflow: hidden;
+    animation:
+        typing2 3.5s steps(34),
+        cursor2 .4s step-end infinite alternate;
+    animation-delay: 3s;
+}
+@keyframes cursor2 {
+    50% {border-color: transparent}
+}
+@keyframes typing2 {
     from {width: 0}
 }
