@@ -4,16 +4,10 @@ body {
     grid-template-rows: repeat(16, 1fr);
     font-family: 'Raleway', sans-serif;
     background-color: black;
-    margin: 0px;
+    margin: 0;
+    padding-left: 40px;
+    padding-right: 40px;
     z-index: -2;
-}
-.row-background {
-    grid-column: 1/-1;
-    grid-row: 1;
-    border: none;
-    background-color: grey;
-    z-index: -1;
-    background-image: linear-gradient(180deg, rgb(48, 41, 41), black);
 }
 #name {
     place-items: center;
@@ -26,15 +20,17 @@ body {
     grid-row: 1;
     grid-column: 1/17;
     align-items: center;
-    margin-left: 35px;
+    height: 200px;
 }
 #nav_options {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: right;
     width: 35vw;
 }
 nav ul li{
     display: inline;
+    margin: auto;
+    margin-right: 0;
     list-style-type: none;
     font-size: 25px;
     transition: transform 0.3s;
@@ -50,16 +46,18 @@ nav ul li:hover {
 #profile-pic {
     background-image: url('IMG_0294.JPG');
     background-size: 100% 100%;
-    grid-column: 8/10;
-    grid-row: 2/4;
-    width: 25vw;
-    height: 25vw;
+    width: 20vw;
+    height: 20vw;
     border-radius: 2000px;
+}
+#pic_and_typing {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    grid-column: 8/8;
 }
 #typewriter {
     display: inline-block;
-    grid-row: 4/4;
-    grid-column: 8/8;
 }
 .text {
     font-size: 2em;
@@ -68,9 +66,10 @@ nav ul li:hover {
     border-right: 5px solid;
     width: 100%;
     white-space: nowrap;
+    font-weight: bold;
     overflow: hidden;
     animation:
-        typing 2s steps(15),
+        typing 3s steps(15),
         cursor .4s step-end infinite alternate;
 }
 @keyframes cursor {
