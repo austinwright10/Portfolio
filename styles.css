@@ -1,7 +1,11 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     display: grid;
     grid-template-columns: repeat(16, 1fr);
-    grid-template-rows: repeat(16, 10vh);
+    grid-template-rows: repeat(50, 10vh);
     font-family: 'Raleway', sans-serif;
     background-color: black;
     margin: 0;
@@ -52,6 +56,12 @@ nav ul li:hover {
     width: 20vw;
     height: 20vw;
     border-radius: 2000px;
+    box-shadow: 0 0 35px rgb(38, 176, 223);
+    transition: 0.4s ease-in-out;
+}
+#profile-pic:hover {
+    box-shadow: 0 0 35px rgb(38, 176, 223),
+                0 0 75px rgb(38, 176, 223);
 }
 #pic_and_typing {
     display: flex;
@@ -59,7 +69,7 @@ nav ul li:hover {
     justify-content: center;
     grid-column: 8;
     grid-row: 6;
-    max-width: 70%;
+    max-width: 50%;
     justify-self: center;
     align-self: center;
 }
@@ -76,7 +86,7 @@ nav ul li:hover {
     font-weight: bold;
     overflow: hidden;
     animation:
-        typing 2.5s steps(12),
+        typing 1s steps(12), CursorEnd .4s forwards,
         cursor .4s step-end infinite alternate;
     margin-bottom: 0;
 }
@@ -99,13 +109,22 @@ nav ul li:hover {
     font-weight: bold;
     overflow: hidden;
     animation:
-        typing2 3.5s steps(34),
+        typing2 1s steps(34),
         cursor2 .4s step-end infinite alternate;
-    animation-delay: 3s;
+    animation-delay: 1s;
 }
 @keyframes cursor2 {
     50% {border-color: transparent}
 }
 @keyframes typing2 {
     from {width: 0}
+}
+#heading {
+    color: white;
+    font-size: 40px;
+}
+#about_me {
+    grid-row: 12;
+    grid-column: 8;
+    justify-self: center;
 }
