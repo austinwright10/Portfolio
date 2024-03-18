@@ -52,11 +52,12 @@ nav ul li:hover {
     color: rgb(23, 150, 193);
 }
 #profile-pic {
-    background-image: url('IMG_0294.JPG');
-    background-size: 100% 100%;
+    background-image: url('IMG_0615.png');
+    background-size: 110% 210%;
+    background-position: center -110px;
     width: 20vw;
     height: 20vw;
-    border-radius: 1000px;
+    border-radius: 2000px;
     box-shadow: 0 0 35px rgb(38, 176, 223);
     transition: 0.4s ease-in-out;
 }
