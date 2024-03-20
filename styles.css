@@ -88,7 +88,7 @@ nav ul li:hover {
     font-weight: bold;
     overflow: hidden;
     animation:
-        typing 1.5s steps(12), CursorEnd .4s forwards,
+        typing 1s steps(12), CursorEnd .4s forwards,
         cursor .4s step-end infinite alternate;
     margin-bottom: 0;
 }
@@ -183,4 +183,19 @@ nav ul li:hover {
     grid-row: 14;
     grid-column: 10/18;
     padding-right: 35px;
+}
+#timeline {
+    color: white;
+    grid-row: 16/20;
+    grid-column: 10/18;
+    padding-top: 25px;
+    line-height: 50px;
+    font-size: 1.5rem;
+    padding-right: 35px;
+}
+#marker::marker{
+    color: rgb(38, 176, 223);
+}
+#marker a {
+    color: rgb(38, 176, 223);
 }
